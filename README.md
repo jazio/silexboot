@@ -1,0 +1,4 @@
+silexboot
+=========
+
+Skeleton for bootstrap
