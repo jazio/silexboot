@@ -1,4 +1,13 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 140%;
+	margin-top: 50px;
+}
+.carousel-inner {
+	background:black;
+	margin-bottom: 15px;
+}
+.carousel-inner img {
+	margin:auto;
+
 }
