@@ -1,8 +1,25 @@
+/* Typo */
+.navbar-brand {
+	font-family: 'Pacifico', cursive;
+	font-size: 120%;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 140%;
-	margin-top: 50px;
+	font-size: 170%;
+
 }
+
+p {
+	line-height: 1.5em;
+}
+
+/* Layout */
+
+body {
+ margin-top: 50px;
+}
+
 .carousel-inner {
 	background:black;
 	margin-bottom: 15px;
@@ -11,3 +28,4 @@ body {
 	margin:auto;
 
 }
+
