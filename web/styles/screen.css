@@ -14,6 +14,8 @@ p {
 	line-height: 1.5em;
 }
 
+.glyphicon {font-size: 60%;}
+
 /* Layout */
 
 body {
@@ -21,11 +23,18 @@ body {
 }
 
 .carousel-inner {
-	background:black;
+	background:url(../img/tweed.png) repeat;
 	margin-bottom: 15px;
 }
 .carousel-inner img {
 	margin:auto;
 
 }
+
+#gallery, #about, #footer {
+background: url(../img/tweed.png) repeat;
+color: white;
+}
+
+img {margin: 0 0 1.5em 0}
 
