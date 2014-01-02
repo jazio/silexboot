@@ -18,12 +18,16 @@ Works
 - text from works
 + gallery
 + view more, 
-add link image
++ link image
+
+Gallery
++ links
++ meniu
 
 Blog
-space paragraph image, panels
-add date, read more
-pagers
++ space paragraph image, panels
++ date, read more
+
 
 About
 + round pictures

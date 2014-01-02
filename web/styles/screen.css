@@ -9,6 +9,9 @@ body {
 	font-size: 170%;
 
 }
+h2 {
+	margin: 0 0 1em 0;
+}
 
 p {
 	line-height: 1.5em;
@@ -19,7 +22,7 @@ p {
 /* Layout */
 
 body {
- margin-top: 50px;
+	margin-top: 50px;
 }
 
 .carousel-inner {
@@ -32,9 +35,21 @@ body {
 }
 
 #gallery, #about, #footer {
-background: url(../img/tweed.png) repeat;
-color: white;
+	background: url(../img/tweed.png) repeat;
+	color: white;
 }
 
-img {margin: 0 0 1.5em 0}
+.row {
+	padding: 5em 0;
+	
+}
+
+.blog-date{
+	color: #A5A5A5;
+	font-size: 14px;
+}
+
+img {
+	margin: 0 0 1.5em 0;
+}
 
