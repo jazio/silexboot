@@ -16,13 +16,12 @@ jQuery(function($){
      * @return {[type]} [description]
      */
     APP.modalBox = function () {
-            $("a[rel^='prettyPhoto']").prettyPhoto({
-                animation_speed:'normal',
-                theme:'default',
-                slideshow:3000, 
-                autoplay_slideshow: true
-            });
-
+        $("a[rel^='prettyPhoto']").prettyPhoto({
+            animation_speed:'normal',
+            theme:'facebook',
+            slideshow:3000, 
+            autoplay_slideshow: true
+        });
     }
 
     //runtime
