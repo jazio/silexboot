@@ -4,8 +4,8 @@ jQuery(function($){
      * Menu smooth scrolling
      * @return {[type]} [description]
      */
-     APP.smoothScroll = function () {
-        $(".nav a").click(function(e) {
+     APP.smoothScroll = function (menu) {
+        $(menu).click(function(e) {
             e.preventDefault();
             $('html,body').scrollTo(this.hash, this.hash);
         });
@@ -15,19 +15,23 @@ jQuery(function($){
      * Modalbox for image thumbnails
      * @return {[type]} [description]
      */
-     APP.modalBox = function () {
+     APP.modalBox = function (width, height, speed, theme) {
         $("a[rel^='prettyPhoto']").prettyPhoto({
-            animation_speed:'normal',
-            theme:'facebook',
+            animation_speed: speed,
+            theme: theme,
             slideshow:3000, 
             //autoplay_slideshow: true,
-            default_width: 800,
-            default_height: 744,
+            default_width: width,
+            default_height: height,
             keyboard_shortcuts: true, //Set to false if you open forms inside prettyPhoto
             social_tools: '' /* html or false to disable */
         });
     }
-
+    /**
+     * Google Maps
+     * [googleMapsInitialize description]
+     * @return {[type]} [description]
+     */
     APP.googleMapsInitialize = function () {
         var map_canvas = document.getElementById('mapCanvas');
         var map_options = {
@@ -49,8 +53,8 @@ jQuery(function($){
     }
 
     //runtime
-    APP.smoothScroll();
-    APP.modalBox();
+    APP.smoothScroll(menu = ".nav a");
+    APP.modalBox(width = 800, height = 744, speed = 'normal', theme = 'facebook');
     APP.googleMapsInitialize();
     google.maps.event.addDomListener(window, 'load', initialize);
 
