@@ -12,6 +12,28 @@ jQuery(function($){
 
     }
     /**
+     * [backTop description]
+     * @return {[type]} [description]
+     */
+    APP.backTop = function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+    }
+    /**
      * Modalbox for image thumbnails
      * @return {[type]} [description]
      */
@@ -32,7 +54,7 @@ jQuery(function($){
      * [googleMapsInitialize description]
      * @return {[type]} [description]
      */
-    APP.googleMapsInitialize = function (canvas, latitude, longitude, zoom_factor, info) {
+     APP.googleMapsInitialize = function (canvas, latitude, longitude, zoom_factor, info) {
         var map_canvas = document.getElementById(canvas);
         var map_options = {
             center: new google.maps.LatLng(latitude, longitude),
@@ -54,6 +76,8 @@ jQuery(function($){
 
     //runtime
     APP.smoothScroll(menu = ".nav a");
+    $("#back-top").hide();
+    APP.backTop();
     APP.modalBox(width = 800, height = 744, speed = 'normal', theme = 'facebook');
     APP.googleMapsInitialize(canvas = 'mapCanvas', latitude = 48.66088, longitude = -72.43883, zoom_factor = 10, info = "MyCompany<br/> 1265 Charlerois G3K 1P2");
     google.maps.event.addDomListener(window, 'load', initialize);
