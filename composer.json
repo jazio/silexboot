@@ -1,11 +1,18 @@
 {
-    "name": "jazio",
-    "description": "Theme for Bootstrap",
-    "licenses": "MIT",
-    "authors": [
-        {
-            "name": "",
-            "email": ""
-        }
-    ]
+  "name":"jazio/silexboot",
+  "version":"0.0.1",
+  "minimum-stability": "dev" ,
+  "require":{
+    "silex/silex":"1.*",
+    "symfony/form":"*",
+    "twig/twig":"*",
+    "symfony/translation":"*",
+    "symfony/twig-bridge":"*",
+    "symfony/locale":"*",
+    "symfony/validator":"*",
+    "symfony/security":"*",
+    "monolog/monolog":"*",
+    "symfony/monolog-bridge":"*",
+    "symfony/config":"*"
+    }
 }

@@ -1,3 +1,7 @@
+/*
+credits: jazio.net
+v. 1.0
+*/
 jQuery(function($){
     var APP = window.APP || {};
     /**
