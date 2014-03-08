@@ -32,21 +32,21 @@ jQuery(function($){
      * [googleMapsInitialize description]
      * @return {[type]} [description]
      */
-    APP.googleMapsInitialize = function () {
-        var map_canvas = document.getElementById('mapCanvas');
+    APP.googleMapsInitialize = function (canvas, latitude, longitude, zoom_factor, info) {
+        var map_canvas = document.getElementById(canvas);
         var map_options = {
-            center: new google.maps.LatLng(48.66088, -72.43883),
-            zoom: 17,
+            center: new google.maps.LatLng(latitude, longitude),
+            zoom: zoom_factor,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(map_canvas, map_options)
 
         var marker = new google.maps.Marker({    
-            position: new google.maps.LatLng(48.66088, -72.43883),  
+            position: new google.maps.LatLng(latitude, longitude), 
             map: map
         });
         var infowindow = new google.maps.InfoWindow({
-            content:"2013 4 Éléments Studio <br/> 1265 Charlebois G8K 1P3"
+            content: info
         });
 
         infowindow.open(map,marker);
@@ -55,7 +55,7 @@ jQuery(function($){
     //runtime
     APP.smoothScroll(menu = ".nav a");
     APP.modalBox(width = 800, height = 744, speed = 'normal', theme = 'facebook');
-    APP.googleMapsInitialize();
+    APP.googleMapsInitialize(canvas = 'mapCanvas', latitude = 48.66088, longitude = -72.43883, zoom_factor = 10, info = "MyCompany<br/> 1265 Charlerois G3K 1P2");
     google.maps.event.addDomListener(window, 'load', initialize);
 
 });
