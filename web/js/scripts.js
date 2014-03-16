@@ -2,7 +2,7 @@
 credits: jazio.net
 v. 1.0
 */
-jQuery(function($){
+(function($){
     var APP = window.APP || {};
     /**
      * Menu smooth scrolling
@@ -86,4 +86,4 @@ jQuery(function($){
     APP.googleMapsInitialize(canvas = 'mapCanvas', latitude = 48.66088, longitude = -72.43883, zoom_factor = 10, info = "MyCompany<br/> 1265 Charlerois G3K 1P2");
     google.maps.event.addDomListener(window, 'load', initialize);
 
-});
+})(jQuery);
