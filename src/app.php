@@ -1,32 +1,18 @@
 <?php
 
-include __DIR__ . '/../vendor/Silex/autoload.php';
+use Silex\Provider\TwigServiceProvider;
 
-use Symfony\Component\HttpFoundation\Response;
-
-$app = new Silex\Application();
-
-// Register extenstions
+// Register extentions
 
 //Twig
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../views',
-    'twig.class_path' => __DIR__ . '/../vendor/Twig/lib',
+$app->register(new TwigServiceProvider(), array(
+    'twig.options'        => array(
+        'cache'            => isset($app['twig.options.cache']) ? $app['twig.options.cache'] : false,
+        'strict_variables' => true
+    ),
+    'twig.form.templates' => array('form_div_layout.html.twig', 'common/form_div_layout.html.twig'),
+    'twig.path'           => array(__DIR__ . '/../resources/views')
 ));
 
 
-// Pages
-$pages = array(
-    '/' => 'home',
-    '/works' => 'works',
-);
-
-//Routes
-foreach ($pages as $route => $view) {
-    $app->get($route, function () use ($app, $view) {
-        return $app['twig']->render($view . '.twig');
-    })->bind($view);
-}
-
-// Run
-$app->run();
+return $app;

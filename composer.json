@@ -1,18 +1,44 @@
 {
-  "name":"jazio/silexboot",
-  "version":"0.0.1",
-  "minimum-stability": "dev" ,
-  "require":{
-    "silex/silex":"1.*",
-    "symfony/form":"*",
-    "twig/twig":"*",
-    "symfony/translation":"*",
-    "symfony/twig-bridge":"*",
-    "symfony/locale":"*",
-    "symfony/validator":"*",
-    "symfony/security":"*",
-    "monolog/monolog":"*",
-    "symfony/monolog-bridge":"*",
-    "symfony/config":"*"
+    "name"        : "jazio/silexboot",
+    "type"        : "Sandbox  bootproject",
+    "description" : "Sandbox project",
+    "keywords"    : ["framework"],
+    "homepage"    : "http://www.jazio.net/",
+    "license"     : "MIT",
+    "authors"     : [
+        {
+            "name"  : "Ovi Farcas",
+            "email" : "farcso@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal"         : "~2.3",
+        "kriswallsmith/assetic" : "~1.1",
+        "leafo/lessphp"         : "~0.4.0",
+        "mheap/silex-assetic"   : "~1.0",
+        "monolog/monolog"       : "~1.6",
+        "silex/silex"           : "~1.1",
+        "symfony/config"        : "~2.3",
+        "symfony/console"       : "~2.3",
+        "symfony/form"          : "~2.3",
+        "symfony/finder"        : "~2.2",
+        "symfony/security"      : "~2.3",
+        "symfony/translation"   : "~2.3",
+        "symfony/twig-bridge"   : "~2.3",
+        "symfony/validator"     : "~2.3",
+        "symfony/yaml"          : "~2.3",
+        "twig/twig"             : "~1.10",
+        "silex/web-profiler"    : "~1.0.1",
+        "twitter/bootstrap"     : "2.3.2"
+    },
+    "require-dev": {
+        "symfony/browser-kit"   : "~2.3",
+        "symfony/css-selector"  : "~2.3",
+        "symfony/dom-crawler"   : "~2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "SKE": "src/"
+        }
     }
 }
