@@ -1,7 +1,7 @@
 <?php
 
 use Silex\Provider\TwigServiceProvider;
-
+use Silex\Provider\UrlGeneratorServiceProvider;
 // Register extentions
 
 //Twig
@@ -14,5 +14,5 @@ $app->register(new TwigServiceProvider(), array(
     'twig.path'           => array(__DIR__ . '/../resources/views')
 ));
 
-
+$app->register(new UrlGeneratorServiceProvider());
 return $app;
