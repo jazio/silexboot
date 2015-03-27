@@ -1,10 +1,13 @@
 <?php
 
+// Classes needed.
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
-// Register extentions
 
-//Twig
+// -----------------------------------------
+// Register extentions.
+// -----------------------------------------
+// Twig templates.
 $app->register(new TwigServiceProvider(), array(
     'twig.options'        => array(
         'cache'            => isset($app['twig.options.cache']) ? $app['twig.options.cache'] : false,
@@ -15,4 +18,5 @@ $app->register(new TwigServiceProvider(), array(
 ));
 
 $app->register(new UrlGeneratorServiceProvider());
+
 return $app;
